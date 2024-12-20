@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import explore from '../assets/explore.jpg';
+import explore from "../assets/explore.jpg";
 
 const Explore = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ const Explore = () => {
     syllabus: "",
     subjects: "",
   });
+  const [result, setResult] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,10 +19,46 @@ const Explore = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitted Data: ", formData);
-    alert("Your details have been submitted!");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+
+    const { class: className, school, area, syllabus, subjects } = formData;
+
+    if (!className || !school || !area || !syllabus || !subjects) {
+      setResult("Please fill in all fields.");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "edd4f6dc-5fb8-4d14-951c-9fe22f39b828",
+          ...formData,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form submitted successfully.");
+        setFormData({
+          class: "",
+          school: "",
+          area: "",
+          syllabus: "",
+          subjects: "",
+        });
+      } else {
+        setResult(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setResult("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -144,6 +181,7 @@ const Explore = () => {
               Submit
             </button>
           </form>
+          {result && <p className="mt-4 text-center text-gray-700">{result}</p>}
         </div>
       </div>
     </div>
