@@ -1,15 +1,15 @@
 import React from "react";
-import home from "./assets/home.jpg";
+import home from "./assets/home2.jpg";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="relative bg-cyan-50 min-h-screen flex flex-col items-center">
       <div className="mt-20"></div>
-      <div className="flex-1">
+      <div className="flex-1 flex justify-center items-center">
         <img
           src={home}
           alt="home"
-          className="w-full h-full object-cover rounded-lg shadow-lg"
+          className="w-full h-auto max-h-[400px] rounded-lg shadow-lg"
         />
       </div>
       <div className="flex-1 flex flex-col justify-center items-center text-center lg:text-left px-6 lg:px-16 py-10">
@@ -37,11 +37,11 @@ const Home = () => {
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
           <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-2">🎉 Discounts</h3>
-            <p className="text-gray-600">
-              Get 20% off for first-time users! Sign up today and save big on
-              your child’s learning journey.
-            </p>
+          <h3 className="text-xl font-semibold mb-2">🎉 Free Registration</h3>
+          <p className="text-gray-600">
+            Sign up today for free registration and take advantage of complimentary demo sessions! Start your child's learning journey with confidence.
+          </p>
+
           </div>
           <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition">
             <h3 className="text-xl font-semibold mb-2">📢 New Opportunities</h3>
@@ -53,7 +53,7 @@ const Home = () => {
           <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition">
             <h3 className="text-xl font-semibold mb-2">🏆 Success Stories</h3>
             <p className="text-gray-600">
-              Over 10,000+ students have improved their grades with us. Be a
+              Over 100+ students have improved their grades with us. Be a
               part of our growing family!
             </p>
           </div>

@@ -39,28 +39,34 @@ const Signup = () => {
   };
 
   return (
-    <div className='flex justify-center items-center w-full h-screen bg-cyan-50'>
-      <div className='shadow-lg px-8 py-5 grid w-1/3 h-auto bg-white'>
-        <h2 className='text-lg font-bold text-center'>Signup</h2>
+    <div className="flex justify-center items-center w-full h-screen bg-cyan-50">
+      <div
+        className="
+          shadow-lg px-6 py-5 grid 
+          w-full sm:w-3/4 md:w-2/3 lg:w-1/3 xl:w-1/4 
+          bg-white
+        "
+      >
+        <h2 className="text-lg font-bold text-center">Signup</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4 grid">
-            <label htmlFor="fullName" className='block text-gray-700'>Full Name</label>
+            <label htmlFor="fullName" className="block text-gray-700">Full Name</label>
             <input
-              id='fullName'
+              id="fullName"
               type="text"
-              placeholder='Enter Full Name'
-              className='w-full px-3 py-2 border'
+              placeholder="Enter Full Name"
+              className="w-full px-3 py-2 border"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
             />
           </div>
           <div className="mb-4 grid">
-            <label htmlFor="email" className='block text-gray-700'>Email</label>
+            <label htmlFor="email" className="block text-gray-700">Email</label>
             <input
-              id='email'
+              id="email"
               type="email"
-              placeholder='Enter Email'
-              className='w-full px-3 py-2 border'
+              placeholder="Enter Email"
+              className="w-full px-3 py-2 border"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -68,20 +74,20 @@ const Signup = () => {
           <div className="mb-4 grid">
             <label htmlFor="password" className="block text-gray-700">Password</label>
             <div className="flex items-center">
-              <input 
-                id="password" 
-                type={showPassword ? 'text' : 'password'} 
-                placeholder="Enter Password" 
+              <input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter Password"
                 className="w-full px-3 py-2 border rounded-l"
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="px-3 py-2 bg-gray-200 border border-l-0 rounded-r hover:bg-gray-300"
               >
-                {showPassword ? 'Hide' : 'Show'}
+                {showPassword ? "Hide" : "Show"}
               </button>
             </div>
           </div>
@@ -90,7 +96,7 @@ const Signup = () => {
             <div className="flex items-center">
               <input
                 id="confirmPassword"
-                type={showConfirmPassword ? 'text' : 'password'}
+                type={showConfirmPassword ? "text" : "password"}
                 placeholder="Confirm Password"
                 className="w-full px-3 py-2 border"
                 value={confirmPassword}
@@ -100,8 +106,8 @@ const Signup = () => {
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className="px-3 py-2 bg-gray-200 border border-l-0 rounded-r hover:bg-gray-300"
-                >
-                {showConfirmPassword ? 'Hide' : 'Show'}
+              >
+                {showConfirmPassword ? "Hide" : "Show"}
               </button>
             </div>
           </div>
@@ -110,15 +116,15 @@ const Signup = () => {
           )}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2"
+            className="w-full bg-blue-600 text-white py-2 hover:bg-blue-700"
             disabled={loading}
           >
-            {loading ? 'Signing up...' : 'Signup'}
+            {loading ? "Signing up..." : "Signup"}
           </button>
         </form>
         <div className="text-center mt-4">
           <span>Already have an account?</span>
-          <Link to='/login' className='text-blue-500 ml-2'>Login</Link>
+          <Link to="/login" className="text-blue-500 ml-2 hover:underline">Login</Link>
         </div>
       </div>
     </div>

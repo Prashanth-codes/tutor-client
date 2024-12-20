@@ -1,101 +1,64 @@
 import React from "react";
-import aboutus from "../assets/aboutus.jpg";
+import aboutus from "../assets/about.jpg";
+import './AboutUs.css';
+
 const AboutUs = () => {
   return (
-    <section id="about" className="min-h-screen mt-40 flex items-center justify-center bg-cyan-50 md:mt-60 lg:mt-40">
-      <div className="flex">
-      <div className="container mx-auto px-6 lg:px-16">
-        <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
-          About Us
-        </h2>
-        <p className="text-lg text-center text-gray-700 mb-5 font-bold">
-          Empowering Students, Transforming Futures.
-        </p>
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Who We Are
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              At <span className="font-bold">RK Home & Online Tutors</span>, we
-              are passionate about transforming education by connecting
-              experienced tutors with students who strive for excellence.
-              Established in 2020, we have grown into Hyderabad’s{" "}
-              <span className="font-bold">
-                leading tutoring service
-              </span>, trusted by thousands of parents and students for our
-              personalized and result-oriented approach.
-            </p>
-        </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              To empower students by providing{" "}
-              <span className="font-bold">
-                high-quality, customized learning experiences
-              </span>{" "}
-              that help them excel in their academics and build confidence for
-              a brighter future.
-            </p>
-          </div>
-        <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              What We Offer
-            </h3>
-            <ul className="list-disc pl-5 text-gray-600 leading-relaxed">
-              <li>
-                <span className="font-bold">Comprehensive Subject Coverage:</span>{" "}
-                Expert tutors for all subjects and syllabi, including CBSE,
-                ICSE, SSC, IGCSE, and more.
-              </li>
-              <li>
-                <span className="font-bold">Qualified Tutors:</span> Tutors with
-                a minimum of one year of experience in their respective fields.
-              </li>
-              <li>
-                <span className="font-bold">Flexible Learning Modes:</span> Home
-                and online tutoring options to suit your convenience.
-              </li>
-              <li>
-                <span className="font-bold">Continuous Assessment:</span>{" "}
-                Regular midweek and weekend tests to monitor and ensure
-                progress.
-              </li>
-              <li>
-                <span className="font-bold">Result-Driven Approach:</span> Proven
-                track record of 100% success in improving students' academic
-                performance.
-              </li>
-            </ul>
-          </div>
-        <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Why Choose Us
-            </h3>
-            <ul className="list-disc pl-5 text-gray-600 leading-relaxed">
-              <li>
-                <span className="font-bold">Transparent & Reliable:</span> No
-                registration or commission fees for tutors or parents.
-              </li>
-              <li>
-                <span className="font-bold">Personalized Attention:</span>{" "}
-                Tailored teaching strategies to meet every student’s unique
-                learning needs.
-              </li>
-              <li>
-                <span className="font-bold">Holistic Development:</span> Focus
-                on improving academic results and fostering confidence,
-                discipline, and a love for learning.
-              </li>
-            </ul>
+    <section
+      id="about"
+      className="min-h-screen mt-40 sm:mt-60 md:mt-20 lg:mt-20 flex items-center justify-center bg-cyan-50"
+    >
+      <div className="container mx-auto px-6 lg:px-16 flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="lg:w-1/2">
+          <h2 className="text-4xl font-bold text-center lg:text-left text-blue-600 mb-4">
+            About Us
+          </h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                Who We Are
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                At <span className="font-bold">RK Home & Online Tutors</span>, we
+                connect experienced tutors with students striving for excellence.
+                Since 2020, we’ve become Hyderabad’s trusted tutoring service,
+                delivering personalized, result-driven education.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                Our Mission
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We aim to empower students with{" "}
+                <span className="font-bold">
+                  customized learning experiences
+                </span>{" "}
+                to build confidence and excel academically.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                What We Offer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We provide expert tutors across all subjects and syllabi (CBSE,
+                ICSE, SSC, IGCSE, and more), flexible home/online learning
+                modes, continuous assessments, and a proven track record of
+                academic success.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="mt-60">
-        <img src={aboutus} alt="about" />
-      </div>
+        <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
+          <div className="custom"></div>
+          <img
+            src={aboutus}
+            alt="About Us"
+            className="rounded-lg shadow-lg w-full max-w-[90%] lg:max-w-[600px] object-contain sm:object-cover sm:mt-40"
+            style={{ height: 'auto' }}
+          />
+        </div>
       </div>
     </section>
   );

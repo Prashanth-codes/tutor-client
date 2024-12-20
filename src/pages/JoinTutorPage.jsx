@@ -1,8 +1,11 @@
 import React from "react";
+import { Link, Routes, Route, Navigate } from "react-router-dom";
+import Form from "./join/Form";
+import ContactUs from "./search/ContactUs";
 
 const JoinTutorPage = () => {
   return (
-    <div className="bg-gray-50 py-16 mt-[70px]">
+    <div className="bg-cyan-50 py-16 mt-[70px]">
       <div className="container mx-auto px-6 lg:px-16 text-center">
         <h2 className="text-4xl font-bold text-blue-600 mb-6">
           Join RK Tutors as a Tutor
@@ -12,21 +15,27 @@ const JoinTutorPage = () => {
           Fill out the form below to register with us and become a part of Hyderabad’s leading 
           tutoring platform!
         </p>
-        <div className="relative overflow-hidden shadow-md rounded-lg">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdAEuxa5ztPxlUHedDlZY7lYE7mrSXaGgo_qN-V65-llWII2w/viewform?embedded=true"
-            title="Join as Tutor Form"
-            width="100%"
-            height="800px"
-            frameBorder="0"
-            className="border-none"
-            allowFullScreen
-          ></iframe>
+        <div className="space-x-6 flex justify-center items-center mt-6">
+          <Link
+            to="/join-tutor/fillform"
+            className="bg-gray-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          >
+            Fill Form
+          </Link>
+          <Link
+            to="/join-tutor/contact"
+            className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          >
+            Contact
+          </Link>
         </div>
-        <p className="text-sm text-gray-500 mt-6">
-          By filling out this form, you agree to our terms and conditions and provide consent 
-          for us to contact you for tutor-related opportunities.
-        </p>
+      </div>
+      <div className="mt-10">
+        <Routes>
+          <Route path="/" element={<Navigate to="/join-tutor/fillform" />} />
+          <Route path="fillform" element={<Form />} />
+          <Route path="contact" element={<ContactUs />} />
+        </Routes>
       </div>
     </div>
   );

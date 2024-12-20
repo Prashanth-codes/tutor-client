@@ -26,20 +26,24 @@ const Explore = () => {
 
   return (
     <div id="explore" className="py-16">
-        <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
-          Explore Tutors
-        </h2>
-      <div className="flex justigy-between items-center">
-        <div className="ml-10">
-          <img src={explore} alt="explore" />
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-6">
+        Explore Tutors
+      </h2>
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-10 lg:space-y-0 lg:space-x-12 px-4 md:px-10 lg:px-16">
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src={explore}
+            alt="Explore"
+            className="rounded-lg shadow-lg w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-full object-cover lg:h-150 lg:mt-10"
+          />
         </div>
-        <div className="container mx-auto px-6 lg:px-16">
-          <p className="text-lg text-center text-gray-700 mb-10">
+        <div className="w-full lg:w-1/2">
+          <p className="text-md sm:text-lg text-center text-gray-700 mb-8 px-4 sm:px-8 lg:px-0">
             Provide your child’s details, and we’ll connect you with the best tutor!
           </p>
           <form
             onSubmit={handleSubmit}
-            className="bg-white shadow-md rounded-lg p-8 space-y-6 max-w-lg mx-auto"
+            className="bg-white shadow-md rounded-lg p-6 sm:p-8 space-y-6 max-w-lg mx-auto lg:mx-0"
           >
             <div>
               <label
@@ -135,14 +139,13 @@ const Explore = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
+              className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
             >
               Submit
             </button>
           </form>
         </div>
       </div>
-      
     </div>
   );
 };

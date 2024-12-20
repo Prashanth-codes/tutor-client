@@ -6,7 +6,8 @@ import SearchTutorPage from "./pages/SearchTutorPage";
 import JoinTutorPage from "./pages/JoinTutorPage";
 import Login from './auth/Login';
 import Signup from './auth/Signup';
-
+import ContactUs from './pages/search/ContactUs';
+import Form from './pages/join/Form';
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/search-tutor" element={<SearchTutorPage />}></Route>
-        <Route path="/join-tutor" element={<JoinTutorPage />}></Route>
+        <Route path="/join-tutor/*" element={<JoinTutorPage />}></Route>
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
