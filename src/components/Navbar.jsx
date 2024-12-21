@@ -30,7 +30,6 @@ const Navbar = () => {
             <NavLink
               exact
               to="/"
-              activeClassName="text-blue-600 bg-gray-100 border-blue-200"
               className="bg-gray-100 border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-100"
             >
               Home
@@ -39,7 +38,6 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/search-tutor"
-              activeClassName="text-blue-600 bg-gray-100 border-blue-200"
               className="bg-gray-100 border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-100"
             >
               Search Tutor
@@ -48,7 +46,6 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/join-tutor"
-              activeClassName="text-blue-600 bg-gray-100 border-blue-200"
               className="bg-gray-100 border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-100"
             >
               Join as Tutor
@@ -57,7 +54,6 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/login"
-              activeClassName="text-blue-600 bg-gray-100 border-blue-200"
               className="bg-gray-100 border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-100"
             >
               Login

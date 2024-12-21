@@ -3,6 +3,9 @@ import explore from "../assets/explore.jpg";
 
 const Explore = () => {
   const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
     class: "",
     school: "",
     area: "",
@@ -23,9 +26,9 @@ const Explore = () => {
     event.preventDefault();
     setResult("Sending...");
 
-    const { class: className, school, area, syllabus, subjects } = formData;
+    const { name, mobile, email, class: className, school, area, syllabus, subjects } = formData;
 
-    if (!className || !school || !area || !syllabus || !subjects) {
+    if (!name || !mobile || !email || !className || !school || !area || !syllabus || !subjects) {
       setResult("Please fill in all fields.");
       return;
     }
@@ -47,6 +50,9 @@ const Explore = () => {
       if (data.success) {
         setResult("Form submitted successfully.");
         setFormData({
+          name: "",
+          mobile: "",
+          email: "",
           class: "",
           school: "",
           area: "",
@@ -74,18 +80,69 @@ const Explore = () => {
             className="rounded-lg shadow-lg w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-full object-cover lg:h-150 lg:mt-10"
           />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 lg:items-center lg:justify-center">
           <p className="text-md sm:text-lg text-center text-gray-700 mb-8 px-4 sm:px-8 lg:px-0">
             Provide your child’s details, and we’ll connect you with the best tutor!
           </p>
           <form
             onSubmit={handleSubmit}
-            className="bg-white shadow-md rounded-lg p-6 sm:p-8 space-y-6 max-w-lg mx-auto lg:mx-0"
+            className="bg-white shadow-md rounded-lg p-6 sm:p-8 space-y-3 max-w-lg mx-auto lg:mx-0"
           >
             <div>
               <label
+                htmlFor="name"
+                className="block text-gray-700 font-semibold mb-1"
+              >
+                Student Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter student's name"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="mobile"
+                className="block text-gray-700 font-semibold mb-1"
+              >
+                Mobile Number
+              </label>
+              <input
+                type="text"
+                id="mobile"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+                placeholder="Enter mobile number"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-semibold mb-1"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter email address"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label
                 htmlFor="class"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 font-semibold mb-1"
               >
                 Class
               </label>
@@ -102,7 +159,7 @@ const Explore = () => {
             <div>
               <label
                 htmlFor="school"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 font-semibold mb-1"
               >
                 School
               </label>
@@ -119,7 +176,7 @@ const Explore = () => {
             <div>
               <label
                 htmlFor="area"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 font-semibold mb-1"
               >
                 Area
               </label>
@@ -136,7 +193,7 @@ const Explore = () => {
             <div>
               <label
                 htmlFor="syllabus"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 font-semibold mb-1"
               >
                 Syllabus
               </label>
@@ -160,7 +217,7 @@ const Explore = () => {
             <div>
               <label
                 htmlFor="subjects"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 font-semibold mb-1"
               >
                 Subjects
               </label>

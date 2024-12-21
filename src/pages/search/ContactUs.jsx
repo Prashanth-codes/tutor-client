@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaMapMarkedAlt, FaPhone, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkedAlt, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 const ContactUs = () => {
   const [result, setResult] = useState('');
@@ -53,7 +53,7 @@ const ContactUs = () => {
             <div className="mb-4 mt-8">
               <FaEnvelope className="inline-block text-orange-400 mr-2" />
               <a href="mailto:prashanthnelluri2005@gmail.com" className="hover:underline">
-                hometuitionrk@gmail.com
+                hometutionrk@gmail.com
               </a>
             </div>
             <div className="mb-4">
@@ -68,8 +68,15 @@ const ContactUs = () => {
               </a>
             </div>
             <div className="mb-4">
-              <FaPhone className="inline-block text-green-400 mr-2" />
-              <span>9494823941</span>
+              <FaWhatsapp className="inline-block text-green-400 mr-2" />
+              <a
+                href="https://wa.me/9494823941"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Whatsapp
+              </a>
             </div>
             <div className="mb-4">
               <FaMapMarkedAlt className="inline-block text-red-400 mr-2" />

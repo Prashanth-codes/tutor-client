@@ -6,7 +6,7 @@ const Form = () => {
       <div className="container mx-auto px-6 lg:px-16">
         <div className="relative overflow-hidden shadow-md rounded-lg">
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdAEuxa5ztPxlUHedDlZY7lYE7mrSXaGgo_qN-V65-llWII2w/viewform?embedded=true"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeQHos9jAuLdbSc1kSOv50duGT3zOm4wmHX-n6ZrKluRgp0nQ/viewform?embedded=true"
             title="Join as Tutor Form"
             width="100%"
             height="800px"

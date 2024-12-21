@@ -1,6 +1,9 @@
 import React from "react";
 import home from "./assets/home2.jpg";
 import { Link } from "react-router-dom";
+
+
+
 const Home = () => {
   return (
     <div className="relative bg-cyan-50 min-h-screen flex flex-col items-center">
@@ -31,6 +34,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+
       <div className="w-full py-8 px-6 mt-6">
         <h2 className="text-2xl font-bold text-center text-blue-600 mb-4">
           Important Information
